@@ -1,6 +1,6 @@
-const express = require ('express'),
-      bodyParser = require('body-parser')
-      usersCtrl = require('./usersCtrl');
+const express = require ('express')
+      , bodyParser = require('body-parser')
+      , usersCtrl = require('./usersCtrl');
 
 const app = express();
 app.use(bodyParser.json());
@@ -17,4 +17,4 @@ app.delete('/api/users/:id', usersCtrl.deleteUser);
 
 
 const PORT = 3000;
-app.listen(PORT, () => console.log('listening on port', PORT));
+app.listen(PORT, () => console.log('listening on port ' + PORT));
